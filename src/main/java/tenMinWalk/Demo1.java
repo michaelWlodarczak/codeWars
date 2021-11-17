@@ -1,8 +1,8 @@
-// class created only for making random trials
+package tenMinWalk;// class created only for making random trials
 
 import java.util.Arrays;
 
-public class DemoMisc {
+public class Demo1 {
     public static void main(String[] args) {
         int[] arrayN = {1, 0}; // 5
         int[] arrayS = {-1, 0}; //-1

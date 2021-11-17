@@ -1,4 +1,6 @@
 import org.junit.Test;
+import tenMinWalk.TenMinWalk;
+
 import static org.junit.Assert.assertEquals;
 
 public class TenMinWalkTest{

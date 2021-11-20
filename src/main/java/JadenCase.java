@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.concurrent.Callable;
+
 /*
 Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013).
 Jaden is also known for some of his philosophy that he delivers via Twitter.
@@ -17,22 +20,37 @@ Note that the Java version expects a return value of null for an empty string or
  */
 public class JadenCase {
     public String toJadenCase(String phrase) {
-        // TODO put your code below this comment
-
-        return null;
+        if(phrase==null || phrase.equals("")){
+            return null;
+        }
+        char[]arr = phrase.toCharArray();
+        for (int i = 0; i < arr.length; i++) {
+            if (i==0 || arr[i-1]==' '){
+                arr[i]=Character.toUpperCase(arr[i]);
+            }
+        }
+        return new String(arr);
     }
 
     public static void main(String[] args) {
 
-        String phrase = "dupa zbita";
+        JadenCase jadenCase = new JadenCase();
+        System.out.println(jadenCase.toJadenCase("How can mirrors be real if our eyes aren't real"));
 
-        System.out.println(phrase.toUpperCase().charAt(0));
+//        char a = 'a';
+//        Character ah = Character.valueOf('a');
+//        System.out.println(Character.toUpperCase('a'));
 
-        String[] parts = phrase.split(" ");
-        String part1 = parts[0];
-        String part2 = parts[1];
-        System.out.println(part1);
-        System.out.println(part2);
+
+//        String phrase = "demokratyczna unia panstw astralnych";
+//        char[] arr = phrase.toCharArray();
+//        for (int i = 0; i < arr.length; i++) {
+//            if(i==0 || arr[i-1]==' '){
+//                arr[i]= Character.toUpperCase(arr[i]);
+//            }
+//        }
+//        System.out.println(arr);
+
 
     }
 }

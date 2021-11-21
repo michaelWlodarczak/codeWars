@@ -1,4 +1,7 @@
+package metro;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /*
 There is a bus moving in the city, and it takes and drop some people in each bus stop.
@@ -19,28 +22,26 @@ So the return integer can't be negative.
 The second value in the first integer array is 0, since the bus is empty in the first bus stop.
  */
 
-class Metro { //TODO
+public class Metro {
 
-//    public static int countPassengers(ArrayList<int[]> stops) {
-//        //Code here!
-//        return ;
-//    }
+    public static int countPassengers(ArrayList<int[]> stops) {
+        int passangersIn = 0;
+        int passengersOut = 0;
+        int remainingPassengers = 0;
 
-    public static void main(String[] args) {
-        Metro metro = new Metro();
-
-        ArrayList<int[]> list = new ArrayList<int[]>();
-        list.add(new int[] {10,0});
-        list.add(new int[] {3,5});
-        list.add(new int[] {2,5});
-
-        ArrayList<int[]> demoList = new ArrayList<>();
-        demoList.add(new int[] {10,0});
-
-        System.out.println(demoList.size()); // .size() zwraca liczbę elementow w liscie
-        System.out.println(list.size());
-
-
+        for (int i = 0; i < stops.size(); i++) {
+            passangersIn += stops.get(i)[0];
+            passengersOut += stops.get(i)[1];
+        }
+        remainingPassengers = passangersIn - passengersOut;
+        return remainingPassengers;
     }
+
+    // Stream solution
+//    public static int countPassengers(ArrayList<int[]> stops) {
+//        return stops.stream()
+//                .mapToInt(x -> x[0] - x[1])
+//                .sum();
+//    }
 
 }

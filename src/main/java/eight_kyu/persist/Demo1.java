@@ -4,7 +4,7 @@ public class Demo1 {
 
     public static long getResult(long n){
         long x = 1;
-        while(n !=0){
+        while(n!=0){
             x = x * (n%10);
             n = n/10;
         }

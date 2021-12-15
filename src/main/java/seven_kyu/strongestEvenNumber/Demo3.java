@@ -30,5 +30,6 @@ public class Demo3 {
             }
             System.out.println("element: " + list.get(i) + " counter: " + count);
         }
+        System.out.println("\nMax Counter: " + maxCount);
     }
 }

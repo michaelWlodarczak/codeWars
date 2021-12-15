@@ -1,5 +1,8 @@
 package seven_kyu.strongestEvenNumber;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 A strongness of an even number is the number of times we can successively divide by 2
 until we reach an odd number starting with an even number n.
@@ -34,8 +37,29 @@ Examples
  */
 public class StrongestEvenNumber {
     public static int strongestEven(int n, int m) {
+        int maxCount = 0;
+        int maxElement = 0;
 
+        List<Integer> list = new ArrayList<>();
+        for (int i = n; i <= m; i++) {
+            list.add(i);
+        }
+        System.out.println(list);
 
-        return 0;
+        for (int i = 0; i < list.size(); i++) {
+            int x = list.get(i);
+            int count = 0;
+            while (x >= 2) {
+                if (x % 2 != 0)
+                    break;
+                x=x/2;
+                count++;
+            }
+            if (maxCount < count){
+                maxCount=count;
+                maxElement=list.get(i);
+            }
+        }
+        return maxElement;
     }
 }

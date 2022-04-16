@@ -1,9 +1,8 @@
 package seven_kyu.strongestEvenNumber;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 
 public class Demo3 {
     public static void main(String[] args) {

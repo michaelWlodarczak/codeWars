@@ -63,3 +63,5 @@ public class StrongestEvenNumber {
         return maxElement;
     }
 }
+
+//TODO - problemis solved, however not passing time in code wars

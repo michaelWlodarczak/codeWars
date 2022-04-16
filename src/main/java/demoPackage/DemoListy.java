@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Main {
+public class DemoListy {
     public static void main(String[] args) {
         List<String> arrayList = new ArrayList<>();
         List<String> linkedList = new LinkedList<>();
 
-        String k = "Krzys";
-        String h = "Haniut";
-        String m = "Mis";
+        String k = "Krzysztof";
+        String h = "Hania";
+        String m = "Michal";
 
         arrayList.add(k);
         arrayList.add(m);

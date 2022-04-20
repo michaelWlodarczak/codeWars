@@ -1,4 +1,4 @@
-package seven_kyu.strongestEvenNumber;
+package seven_kyu.strongestEvenNumber.listSolution;
 
 import java.util.*;
 

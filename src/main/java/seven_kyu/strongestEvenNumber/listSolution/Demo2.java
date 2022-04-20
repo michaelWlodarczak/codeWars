@@ -1,4 +1,4 @@
-package seven_kyu.strongestEvenNumber;
+package seven_kyu.strongestEvenNumber.listSolution;
 
 public class Demo2 {
     public static void main(String[] args) {

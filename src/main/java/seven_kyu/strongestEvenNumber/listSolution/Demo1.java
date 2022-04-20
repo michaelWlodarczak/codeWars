@@ -1,13 +1,13 @@
-package seven_kyu.strongestEvenNumber;
+package seven_kyu.strongestEvenNumber.listSolution;
 
 public class Demo1 {
     public static void main(String[] args) {
-        int n = 12;
+        int n = 16;
         int count1 = 0;
 
         while (n >= 2) {
             n = n / 2;
-            System.out.print(n);
+            //System.out.print(n);
             count1++;
             if(n%2!=0)
                 break;

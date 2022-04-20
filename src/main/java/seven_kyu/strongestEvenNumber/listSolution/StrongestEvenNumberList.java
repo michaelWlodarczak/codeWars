@@ -1,4 +1,4 @@
-package seven_kyu.strongestEvenNumber;
+package seven_kyu.strongestEvenNumber.listSolution;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ Examples
 [5, 10]   -->   8  # 5, 7, 9 have strongness 0; 6, 10 have strongness 1; 8 has strongness 3
 [48, 56]  -->  48
  */
-public class StrongestEvenNumber {
+public class StrongestEvenNumberList {
     public static int strongestEven(int n, int m) {
         int maxCount = 0;
         int maxElement = 0;
@@ -64,4 +64,4 @@ public class StrongestEvenNumber {
     }
 }
 
-//TODO - problemis solved, however not passing time in code wars
+//TODO - problemis solved, however not passing time in code wars - Execution Timed Out (16000 ms)

@@ -2,36 +2,36 @@ package seven_kyu.arrayDiff;
 
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Set;
 
 public class Demo4 {
     public static void main(String[] args) {
-//        Set<Integer> setC = new HashSet<>();
-//        setC.add(1);
-//        setC.add(2);
-//        setC.add(3);
-//        setC.add(2);
-//
-//        setC.forEach(System.out::println);
-//
-//        for(Object s : setC){
-//            System.out.println(s);
-//        }
 
-        int[] a = {1, 2, 2, 3};
-        int[] b = {1};
+        int[] a = {1,3,4,8,9};
+        int[] b = {1,2,5,8};
 
-        Set<int[]> setA = new HashSet<int[]>(Arrays.asList(a));
-        Set<int[]> setB = new HashSet<>(Arrays.asList(b));
+        System.out.println("Array a: " + Arrays.toString(a));
+        System.out.println("Array b: " +Arrays.toString(b));
 
-//        Set<int[]> commonOnes = setA.retainAll(setB);
-//        setA.retainAll(setB);
-//        setA.removeAll(setA.retainAll(setB)).add(setB.removeAll(setA.retainAll(setB)));
+        HashSet<Integer> setA = new HashSet<>();
+        HashSet<Integer> setB = new HashSet<>();
 
-        setA.forEach(System.out::print);
-        for (int[] s : setA){
-            System.out.println(s);
+        for (int x:a){
+            setA.add(x);
         }
+        for (int x:b){
+            setB.add(x);
+        }
+
+        System.out.println("setA: " + setA);
+        System.out.println("setB: " + setB);
+
+        setA.removeAll(setB);
+        System.out.println("setA after removing duplicates from setB: " + setA);
+
+        System.out.println("Converting set to array: ");
+        Object[] array = setA.toArray();
+        System.out.println(Arrays.toString(array));
+
 
 
     }

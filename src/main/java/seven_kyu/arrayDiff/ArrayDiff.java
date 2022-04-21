@@ -1,7 +1,9 @@
 package seven_kyu.arrayDiff;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.List;
+import java.util.stream.IntStream;
 
 /*
 Your goal in this kata is to implement a difference function,
@@ -15,13 +17,35 @@ If a value is present in b, all of its occurrences must be removed from the othe
 Kata.arrayDiff(new int[] {1, 2, 2, 2, 3}, new int[] {2}) => new int[] {1, 3}
  */
 public class ArrayDiff {
-        public static int[] arrayDiff(int[] a, int[] b) {
-            return a;
-        }
+            public static int[] arrayDiff(int[] a, int[] b) {
+                List<Integer> listA = new ArrayList<>();
+                List<Integer> listB = new ArrayList<>();
 
+                for (int x:a){
+                    listA.add(x);
+                }
+                for (int x:b){
+                    listB.add(x);
+                }
 
-    public static void main(String[] args) {
+                listA.removeAll(listB); // this line did a job! ;)
 
-    }
+                int[] array = new int[listA.size()];
+
+                int k = 0;
+                for (int i: listA) {
+                    array[k++] = i;
+                }
+
+                Arrays.toString(array);
+                return array;
+            }
+
+            //ONELINER:
+
+//    public static int[] arrayDiff(int[] a, int[] b) {
+//        return IntStream.of(a).filter(x -> IntStream.of(b).noneMatch(y -> y == x)).toArray();
+//    }
+
 
 }

@@ -47,9 +47,24 @@ public class SimpleStringCharacters {
         return solve;
     }
 
-    public static void main(String[] args) {
+    //OTHER SOLUTIONS:
 
-    }
+//    static int[] Solve(String word) {
+//        return new int[] {
+//                word.replaceAll("[^A-Z]", "").length(),
+//                word.replaceAll("[^a-z]", "").length(),
+//                word.replaceAll("[^0-9]", "").length(),
+//                word.replaceAll("[\\w]", "").length()
+//        };
+//    }
+
+//    public static int[] Solve(String word) {
+//        int upperCase = (int) word.chars().filter(value -> Character.isUpperCase(value)).count();
+//        int lowerCase = (int) word.chars().filter(value -> Character.isLowerCase(value)).count();
+//        int number = (int) word.chars().filter(value -> Character.isDigit(value)).count();
+//        int specialChar = word.length() - (upperCase + lowerCase + number);
+//        return new int[]{upperCase, lowerCase, number, specialChar};
+//    }
 
 
 

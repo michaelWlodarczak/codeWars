@@ -1,4 +1,4 @@
-package eight_kyu;
+package eight_kyu.equalSidesOfAnArray;
 
 import java.util.Arrays;
 
@@ -15,7 +15,8 @@ the sum of left side of the index ({1,2,3}) and the sum of the right side of the
 
 Let's look at another one.
 You are given the array {1,100,50,-51,1,1}:
-Your function will return the index 1, because at the 1st position of the array, the sum of left side of the index ({1})
+Your function will return the index 1, because at the 1st position of the array,
+the sum of left side of the index ({1})
 and the sum of the right side of the index ({50,-51,1,1}) both equal 1.
 
 Last one:
@@ -39,29 +40,8 @@ If you are given an array with multiple answers, return the lowest correct index
  */
 public class EqualSidesOfAnArray { //TODO 6kyu
 
-//    public static int findEvenIndex(int[] arr) {
-//        return;
-//    }
-
-    public static void main(String[] args) {
-
-        int[] arr = {1, 2, 3, 4, 3, 2, 1};
-        int sumLeft = 0;
-        int sumRight = 0;
-        int count = 0;
-
-        System.out.println(arr.length / 2);
-
-        for (int i = 0; i < arr.length; i++) {
-            sumLeft += arr[i];
-            System.out.println("sumLeft: " + sumLeft);
-        }
-        for (int i = arr.length - 1; i >= 0; i--) {
-            sumRight += arr[i];
-            System.out.println("sumRight:" + sumRight);
-        }
-
-
-
+    public static int findEvenIndex(int[] arr) {
+        return 0;
     }
+
 }

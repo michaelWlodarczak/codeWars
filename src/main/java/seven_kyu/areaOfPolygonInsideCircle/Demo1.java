@@ -5,14 +5,14 @@ public class Demo1 {
 
         // S = 0,5 * circleRadius^2 * numberOfSides * sin(360/numberOfSides)
 
-        double circleRadius = 5.8;
-        int numberOfSides = 7;
+        double circleRadius = 12;
+        int numberOfSides = 14;
 
-        double S = 0.5 * Math.pow(circleRadius,2) * numberOfSides * Math.sin(Math.toRadians(360/numberOfSides));
+        double S = 0.5 * Math.pow(circleRadius,2) * numberOfSides * Math.sin(Math.toRadians(360.0/numberOfSides));
 
         double a = 0.5 * Math.pow(circleRadius, 2) * numberOfSides;
 
-        double b = Math.round(Math.sin(Math.toRadians(360/numberOfSides)))*1000.0/1000.0;
+        double b = Math.round(Math.sin(Math.toRadians(360.0/numberOfSides)))*1000.0/1000.0;
 
         System.out.println("NOT round a: " + a);
         System.out.println("round a: " + (Math.round(a)*1000.0)/1000.0);
@@ -38,7 +38,7 @@ public class Demo1 {
 //        double salary = Math.round(input * 1000.0) / 1000.0;
 //        System.out.println("salary : " + salary);
 
-        System.out.println("S: " + Math.round((0.5 * Math.pow(circleRadius,2) * numberOfSides * Math.sin(Math.toRadians(360/numberOfSides)))*1000.0)/1000.0);
+        System.out.println("S: " + Math.round((0.5 * Math.pow(circleRadius,2) * numberOfSides * Math.sin(Math.toRadians(360.0/numberOfSides)))*1000.0)/1000.0);
     }
 
 

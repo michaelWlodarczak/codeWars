@@ -17,6 +17,31 @@ areaOfPolygonInsideCircle(4, 5) // returns 38.042
 
 public class AreaOfPolygonInsideCircle {
     public static double areaOfPolygonInsideCircle(double circleRadius, int numberOfSides) {
-     return Math.round((0.5 * Math.pow(circleRadius,2) * numberOfSides * Math.sin(Math.toRadians(360/numberOfSides)))*1000.0)/1000.0;
+     return Math.round((0.5 * Math.pow(circleRadius,2) * numberOfSides * Math.sin(Math.toRadians(360.0/numberOfSides)))*1000.0)/1000.0;
     }
+
+    public static void main(String[] args) {
+
+        System.out.println(areaOfPolygonInsideCircle(12, 14));
+        System.out.println(areaOfPolygonInsideCircle(14, 22));
+        System.out.println(areaOfPolygonInsideCircle(20, 19));
+    }
+
+    /*My comment:
+
+        I considered this code working well.
+        There was some bug (problem) in making the result round to three decimal places (in my opinion)
+
+        My solution is not passing CodeWar random test example:
+        Log
+            100 Random Tests
+            Random test #2: radius = 20 sides = 19
+            expected:<1233.858> but was:<1174.265>
+
+        Below mentioned part of code did a job!
+        Math.sin(Math.toRadians(360.0/numberOfSides) instead of just 360 which caused above mentioned error.
+
+        Kata finally solved ;)
+
+    */
 }

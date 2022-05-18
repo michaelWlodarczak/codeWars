@@ -7,16 +7,16 @@ public class Demo2 {
         // S = 0,5 * circleRadius^2 * cos(180/numberOfSides) * cos(45/numberOfSides) * cos(90/numberOfSides)
         // * numberOfSides * sin(45/numberOfSides)
 
-        double circleRadius = 18;
-        int numberOfSides = 22;
+        double circleRadius = 20;
+        int numberOfSides = 19;
 
-        double S = 0.5 * Math.pow(circleRadius,2) * numberOfSides * Math.sin(Math.toRadians(360/numberOfSides));
+        double S = 0.5 * Math.pow(circleRadius,2) * numberOfSides * Math.sin(Math.toRadians(360.0/numberOfSides));
         double S2 = 4 * Math.pow(circleRadius,2)
-                * Math.cos(Math.toRadians(180/numberOfSides))
-                * Math.cos(Math.toRadians(45/numberOfSides))
-                * Math.cos(Math.toRadians(90/numberOfSides))
+                * Math.cos(Math.toRadians(180.0/numberOfSides))
+                * Math.cos(Math.toRadians(45.0/numberOfSides))
+                * Math.cos(Math.toRadians(90.0/numberOfSides))
                 * numberOfSides
-                * Math.sin(Math.toRadians(45/numberOfSides));
+                * Math.sin(Math.toRadians(45.0/numberOfSides));
 
 
         System.out.println(S);

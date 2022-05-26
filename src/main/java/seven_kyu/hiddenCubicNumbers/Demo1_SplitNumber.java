@@ -3,7 +3,7 @@ package seven_kyu.hiddenCubicNumbers;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class SplitNumber {
+public class Demo1_SplitNumber {
     public static void main(String[] args) {
 
         int m = 153;
@@ -31,23 +31,11 @@ public class SplitNumber {
 //            System.out.println(stack.pop());
 //        }
 
-//        String[] sNums = Integer.toString(m).split("");
-//        for (String s : sNums) {
-//            System.out.println(s);
-//        }
-//
-//        int x = Integer.parseInt(sNums[0]);
-//        int y = Integer.parseInt(sNums[1]);
-//        int z = Integer.parseInt(sNums[2]);
-//        System.out.println(x);
-//        System.out.println(y);
-//        System.out.println(z);
 
         System.out.println(isCubic(m));
         System.out.println(isCubic(n));
 
     }
-
 
     public static boolean isCubic(int m){
         String[] sNums = Integer.toString(m).split("");
@@ -56,6 +44,5 @@ public class SplitNumber {
         int z = Integer.parseInt(sNums[2]);
         return (m == (int) ((int) Math.pow(x, 3) + Math.pow(y, 3) + Math.pow(z, 3)));
     }
-
 
 }

@@ -4,60 +4,45 @@ import java.util.*;
 
 public class Demo1 {
     public static void main(String[] args) {
-        String[] gloves = {"green", "green", "red", "blue", "yellow", "green"};
 
-        System.out.println(Arrays.toString(gloves));
+//        String[]gloves = {"red", "green", "red", "blue", "blue"};
+          String[]gloves = {"red", "red"};
+//        String[]gloves = {"red", "green", "blue"};
+//        String[]gloves = {"gray", "black", "purple", "purple", "gray", "black"};
+//        String[]gloves = {"red", "green", "blue", "blue", "red", "green", "red", "red", "red"};
 
-        System.out.println("'For i' loop: ");
-        for (int i = 0; i < gloves.length; i++) {
-            System.out.print(gloves[i] + ", ");
-        }
-
-        Set<String> gloveSet = new HashSet<>();
-        Set<String> gloveSetDEMO = new HashSet<>();
-
-        gloveSetDEMO.add("green");
-        gloveSetDEMO.add("green");
-        gloveSetDEMO.add("red");
-        gloveSetDEMO.add("blue");
-        gloveSetDEMO.add("yellow");
-        gloveSetDEMO.add("green");
-
-        System.out.println("\ngloves set as it it: " + gloveSetDEMO);
-
-        for (int i = 0; i < gloves.length; i++) {
-            gloveSet.add(gloves[i]);
-        }
-        System.out.println("gloves set by 'for i' loop: " + gloveSet);
-
-        List<String> glovesList = new ArrayList<>();
-        int counterList =0;
-        int counterArray =0;
-        for (int i = 0; i < gloves.length; i++) {
-            glovesList.add(gloves[i]);
-        }
-        System.out.println("gloves list: " + glovesList);
-
-
-        for (int i = 0; i < glovesList.size(); i++) {
-            for (int j = i+1; j < glovesList.size(); j++) {
-                if (glovesList.get(i).equals(glovesList.get(j))){
-                    System.out.println(glovesList.get(i) + " and " + glovesList.get(j) + " are similar");
-                    counterList++;
-                }
+        Map<String,Integer> glovesMap = new HashMap();
+        for(String x:gloves){
+            if(!glovesMap.containsKey(x)){
+                glovesMap.put(x,1);
+            }else{
+                glovesMap.put(x, glovesMap.get(x)+1);
             }
         }
-        System.out.println(counterList);
+        System.out.println(glovesMap + "\n");
 
-        for (int i = 0; i < gloves.length; i++) {
-            for (int j = i+1; j < gloves.length; j++) {
-                if (gloves[i]==gloves[j]){
-                    System.out.println(gloves[i] + " and " + gloves[j] + " are similar");
-                    counterArray++;
-                }
-            }
+        /*
+        Similar effect like above but using Collection.
+        List<String> sampleList= Arrays.asList(gloves);
+        for(String inpt:gloves){
+            int frequency= Collections.frequency(sampleList,inpt);
+            System.out.println(inpt+" "+frequency);
         }
-        System.out.println(counterArray);
+         */
+
+//        int sum = glovesMap.values().stream().mapToInt(i->i).sum();
+//        System.out.println("sum of values: " +
+
+        int count = 0;
+        int pair = 0;
+        for (Integer values : glovesMap.values()){
+            pair=values/2;
+            System.out.println(pair);
+            count += pair;
+        }
+        System.out.println(count);
+
 
     }
 }
+

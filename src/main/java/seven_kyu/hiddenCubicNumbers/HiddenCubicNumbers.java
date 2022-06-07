@@ -43,6 +43,8 @@ e.g "24172410" becomes 3 strings comprising "241", "724" and "10"
 
 e.g "0785" becomes 2 strings comprising "078" and "5".
  */
+
+//TODO
 public class HiddenCubicNumbers {
 
 //    public String isSumOfCubes(String s) {

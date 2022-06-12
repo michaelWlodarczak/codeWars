@@ -6,7 +6,7 @@ public class Demo3 {
     public static void main(String[] args) {
 
         int[]data = {1,2,3,4,5};
-        int n = 0;
+        int n = -8;
         int[]result = new int[data.length];
 
         if(n>0){

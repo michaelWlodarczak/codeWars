@@ -35,12 +35,23 @@ n = 7        =>    [4, 5, 1, 2, 3]
 n = 11       =>    [5, 1, 2, 3, 4]
 n = 12478    =>    [3, 4, 5, 1, 2]
  */
+//TODO
 public class RotateArray {
     public Object[] rotate(Object[] data, int n) {
-        return new Object[]{};
+        Object[]result = new Object[data.length];
+        if(n>0){
+            for(int i = 0; i < data.length; i++){
+                result[(i+n) % data.length ] = data[i];
+            }
+            return result;
+        }else if (n<0){
+            int m = Math.abs(n);
+            for(int i = 0; i < data.length; i++){
+                result[(i+(data.length-m)) % data.length ] = data[i];
+            }
+            return result;
+        }else {
+            return data;
+        }
     }
-
-
-
-
 }

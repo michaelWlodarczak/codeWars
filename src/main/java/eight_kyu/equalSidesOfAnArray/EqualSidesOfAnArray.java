@@ -38,10 +38,23 @@ If you do not find an index that fits these rules, then you will return -1.
 Note:
 If you are given an array with multiple answers, return the lowest correct index.
  */
-public class EqualSidesOfAnArray { //TODO 6kyu
-
+public class EqualSidesOfAnArray {
     public static int findEvenIndex(int[] arr) {
-        return 0;
+        int left = 0;
+        int right = Arrays.stream(arr).sum();
+        for (int i = 0; i < arr.length; i++) {
+            right -= arr[i];
+            if (left == right) return i;
+            left += arr[i];
+        }
+        return -1;
     }
+
+    //OTHER SOLUTION
+//    public static int findEvenIndex(int[] arr) {
+//        return IntStream.range(0, arr.length)
+//                .filter(n -> IntStream.of(arr).limit(n).sum() == IntStream.of(arr).skip(n + 1).sum())
+//                .findFirst().orElse(-1);
+//    }
 
 }

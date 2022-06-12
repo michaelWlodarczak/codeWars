@@ -6,7 +6,7 @@ public class Demo1_RotateRight {
     public static void main(String[] args) {
 
         int[]data = {1,2,3,4,5};
-        int n = 1;
+        int n = 999;
         int[]resultRight = new int[data.length];
 
         System.out.println("Orginal array:" + Arrays.toString(data));

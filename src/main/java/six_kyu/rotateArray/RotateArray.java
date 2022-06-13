@@ -1,6 +1,7 @@
 package six_kyu.rotateArray;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 /*
 Create a method named "rotate" that returns a given array with the elements inside the array rotated n spaces.
@@ -35,23 +36,41 @@ n = 7        =>    [4, 5, 1, 2, 3]
 n = 11       =>    [5, 1, 2, 3, 4]
 n = 12478    =>    [3, 4, 5, 1, 2]
  */
-//TODO
+
 public class RotateArray {
+
+    //OTHER SOLUTION
+
+//    public Object[] rotate(Object[] data, int n) {
+//        Collections.rotate(Arrays.asList(data), n);
+//        return data;
+//    }
+
     public Object[] rotate(Object[] data, int n) {
-        Object[]result = new Object[data.length];
-        if(n>0){
-            for(int i = 0; i < data.length; i++){
-                result[(i+n) % data.length ] = data[i];
+        Object[] result = new Object[data.length];
+
+        if (n > 0) {
+            for (int i = 0; i < data.length; i++) {
+                result[(i + n) % data.length] = data[i];
             }
             return result;
-        }else if (n<0){
+        } else if (n < 0) {
             int m = Math.abs(n);
-            for(int i = 0; i < data.length; i++){
-                result[(i+(data.length-m)) % data.length ] = data[i];
+            for (int i = 0; i < m; i++) {
+                int j;
+                Object first;
+                first = data[0];
+                for (j = 0; j < data.length - 1; j++) {
+                    data[j] = data[j + 1];
+                }
+                data[j] = first;
             }
-            return result;
-        }else {
+            return data;
+        } else {
             return data;
         }
+
+
     }
 }
+

@@ -1,5 +1,7 @@
 package six_kyu.sumsOfParts;
 
+import java.util.ArrayList;
+
 /*
 Let us consider this example (array written in general format):
 
@@ -32,8 +34,30 @@ Take a look at performance: some lists have thousands of elements.
 Please ask before translating.
  */
 public class SumParts {
-//    public static int[] sumParts(int[] ls) {
-//        // your code
-//    }
+    public static int[] sumParts(int[] ls) {
+        ArrayList<Integer>list = new ArrayList<>();
+        ArrayList<Integer> sum = new ArrayList<>();
+        for (int i = 0; i < ls.length; i++) {
+            list.add(ls[i]);
+        }
+        for (int i = 0; i < ls.length; i++) {
+            sum.add(list.stream().mapToInt(Integer::intValue).sum());
+            list.remove(0);
+        }
+        sum.add(0);
+        int[] b = new int[sum.size()];
+        for (int i = 0; i < sum.size(); i++) {
+            b[i]=sum.get(i);
+        }
+        return b;
+    }
 
+    //TODO
+   /* test2
+    Log
+    Arrays length between 150000 and 200000
+    STDERR
+    Execution Timed Out (16000 ms)
+
+    */
 }

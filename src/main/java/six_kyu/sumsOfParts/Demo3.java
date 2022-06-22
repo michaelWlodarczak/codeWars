@@ -10,13 +10,13 @@ public class Demo3 {
         ArrayList<Integer> sum = new ArrayList<>();
 
         ArrayList<Integer>list = new ArrayList<>();
-        for (int i = 0; i < ls.length; i++) {
-            list.add(ls[i]);
+        for (int x : ls){
+            list.add(x);
         }
 
         for (int i = 0; i < ls.length; i++) {
-            System.out.println(list);
-            System.out.println(list.stream().mapToInt(Integer::intValue).sum());
+//            System.out.println(list);
+//            System.out.println(list.stream().mapToInt(Integer::intValue).sum());
             sum.add(list.stream().mapToInt(Integer::intValue).sum());
             list.remove(0);
         }
@@ -28,6 +28,8 @@ public class Demo3 {
             b[i]=sum.get(i);
         }
         System.out.println(Arrays.toString(b));
+
+
 
 
     }

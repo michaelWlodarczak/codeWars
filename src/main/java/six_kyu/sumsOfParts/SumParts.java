@@ -37,8 +37,8 @@ public class SumParts {
     public static int[] sumParts(int[] ls) {
         ArrayList<Integer>list = new ArrayList<>();
         ArrayList<Integer> sum = new ArrayList<>();
-        for (int i = 0; i < ls.length; i++) {
-            list.add(ls[i]);
+        for (int x : ls){
+            list.add(x);
         }
         for (int i = 0; i < ls.length; i++) {
             sum.add(list.stream().mapToInt(Integer::intValue).sum());

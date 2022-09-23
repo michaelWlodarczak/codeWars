@@ -43,12 +43,11 @@ Shell: only dist is tested.
  */
 public class Braking {
     public static double dist(double v, double mu) {    // suppose reaction time is 1
-        // your code
-        return 0;
+        return ((v * 1000 / 3600) + (Math.pow((v * 1000 / 3600), 2)) / (2 * mu * 9.81));
     }
+
     public static double speed(double d, double mu) {   // suppose reaction time is 1
-        // your code
-        return 0;
+        return 3.6 * ((-2 * mu * 9.81 + Math.sqrt(Math.pow(2 * mu * 9.81, 2) - 4 * (-d * 2 * mu * 9.81))) / 2);
     }
 
 
